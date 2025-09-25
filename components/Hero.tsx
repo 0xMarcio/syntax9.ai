@@ -1,6 +1,4 @@
 import { useEffect, useRef } from 'react'
-import Aurora from './Aurora'
-import Starfield from './Starfield'
 
 export default function Hero() {
   const wrapRef = useRef<HTMLDivElement | null>(null)
@@ -21,16 +19,7 @@ export default function Hero() {
   }, [])
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black select-none">
-      <Starfield />
-      <Aurora />
-
-      {/* Nebula orbs */}
-      <div className="pointer-events-none absolute -top-20 -left-10 w-[60vw] h-[60vw] rounded-full blur-[120px] bg-cyan-500/20" />
-      <div className="pointer-events-none absolute -bottom-32 -right-10 w-[50vw] h-[50vw] rounded-full blur-[120px] bg-fuchsia-500/15" />
-
-      {/* Grain overlay */}
-      <div className="pointer-events-none absolute inset-0 opacity-[0.07] mix-blend-overlay" style={{ backgroundImage: 'url("data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'160\' height=\'160\' viewBox=\'0 0 160 160\'%3E%3Cfilter id=\'n\'%3E%3CfeTurbulence type=\'fractalNoise\' baseFrequency=\'0.9\' numOctaves=\'4\' stitchTiles=\'stitch\'/%3E%3C/filter%3E%3Crect width=\'100%25\' height=\'100%25\' filter=\'url(%23n)\' opacity=\'0.45\'/%3E%3C/svg%3E")' }} />
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black/0 select-none">
 
       <div ref={wrapRef} className="relative z-10 text-center px-6 will-change-transform" style={{ transform: 'perspective(1200px) rotateX(var(--rx, 0)) rotateY(var(--ry, 0))' }}>
         <div className="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-white/5 backdrop-blur-md ring-1 ring-white/10 mb-6">

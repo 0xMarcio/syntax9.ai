@@ -16,6 +16,8 @@ const pillars = [
   }
 ]
 
+import SectionHeader from './SectionHeader'
+
 export default function Research() {
   return (
     <section id="research" className="relative py-28 bg-black overflow-hidden">
@@ -24,12 +26,7 @@ export default function Research() {
       </div>
 
       <div className="relative max-w-6xl mx-auto px-6">
-        <div className="text-center mb-14">
-          <h2 className="text-4xl md:text-6xl font-light tracking-wide">
-            <span className="bg-gradient-to-r from-white via-cyan-200 to-white bg-clip-text text-transparent">Research Pillars</span>
-          </h2>
-          <p className="mt-4 text-gray-400 text-lg md:text-xl">Foundations for resilient, intelligent, and sovereign systems.</p>
-        </div>
+        <SectionHeader title="Research Pillars" subtitle="Foundations for resilient, intelligent, and sovereign systems." />
 
         <div className="grid md:grid-cols-3 gap-6">
           {pillars.map((p, i) => (
@@ -67,4 +64,3 @@ export default function Research() {
     </section>
   )
 }
-

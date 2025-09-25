@@ -6,6 +6,8 @@ const principles = [
   { name: 'Performance', desc: 'Elegant, fast, and efficient.' },
 ]
 
+import SectionHeader from './SectionHeader'
+
 export default function Principles() {
   return (
     <section id="principles" className="relative py-28 bg-black overflow-hidden">
@@ -22,12 +24,7 @@ export default function Principles() {
       </div>
 
       <div className="relative max-w-6xl mx-auto px-6">
-        <div className="text-center mb-14">
-          <h2 className="text-4xl md:text-6xl font-light tracking-wide">
-            <span className="bg-gradient-to-r from-white via-cyan-200 to-white bg-clip-text text-transparent">Principles</span>
-          </h2>
-          <div className="mx-auto mt-6 h-px w-48 bg-gradient-to-r from-transparent via-white/40 to-transparent" />
-        </div>
+        <SectionHeader title="Principles" />
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-4">
           {principles.map((p) => (
@@ -46,4 +43,3 @@ export default function Principles() {
     </section>
   )
 }
-
