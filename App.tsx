@@ -1,4 +1,5 @@
 import Background from './components/Background'
+import Nav from './components/Nav'
 import Hero from './components/Hero'
 import Projects from './components/Projects'
 import Research from './components/Research'
@@ -9,6 +10,7 @@ export default function App() {
   return (
     <div className="dark min-h-screen bg-black text-white overflow-x-hidden relative">
       <Background />
+      <Nav />
       <Hero />
       <Projects />
       <Research />
