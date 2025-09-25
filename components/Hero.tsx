@@ -1,4 +1,6 @@
 import { useEffect, useRef } from 'react'
+import BrandMark from './BrandMark'
+import ScrollCue from './ScrollCue'
 
 export default function Hero() {
   const wrapRef = useRef<HTMLDivElement | null>(null)
@@ -43,10 +45,6 @@ export default function Hero() {
           <span className="relative inline-block">
             <span className="absolute inset-0 bg-gradient-to-r from-cyan-400 via-sky-300 to-fuchsia-400 bg-clip-text text-transparent blur-md opacity-60" aria-hidden>Syntaxy9</span>
             <span className="relative bg-gradient-to-br from-white via-cyan-100 to-white bg-clip-text text-transparent [text-shadow:0_2px_40px_rgba(59,130,246,.25)]">Syntaxy9</span>
-            {/* sheen */}
-            <span className="pointer-events-none absolute inset-0 [mask-image:linear-gradient(90deg,transparent,black,transparent)]" aria-hidden>
-              <span className="absolute inset-y-0 -left-1/3 w-1/3 bg-gradient-to-r from-transparent via-white to-transparent opacity-60 skew-x-12 animate-[sheen_2.8s_ease-in-out_infinite]" />
-            </span>
           </span>
         </h1>
 
@@ -63,6 +61,10 @@ export default function Hero() {
             <span className="absolute inset-0 -z-10 rounded-xl bg-gradient-to-r from-cyan-400 to-fuchsia-500 blur-xl opacity-50" />
           </a>
         </div>
+
+        <div className="mt-10 flex justify-center opacity-80">
+          <BrandMark />
+        </div>
       </div>
 
       {/* accent rings */}
@@ -71,17 +73,7 @@ export default function Hero() {
         <div className="absolute left-[20%] top-[35%] w-[30vmin] h-[30vmin] rounded-full border border-white/10" />
         <div className="absolute right-[18%] top-[28%] w-[22vmin] h-[22vmin] rounded-full border border-white/10" />
       </div>
-      <style dangerouslySetInnerHTML={{
-        __html: `
-          @keyframes sheen {
-            0% { transform: translateX(-10%); opacity: 0; }
-            15% { opacity: 1; }
-            50% { transform: translateX(130%); opacity: 1; }
-            85% { opacity: 1; }
-            100% { transform: translateX(180%); opacity: 0; }
-          }
-        `
-      }} />
+      <ScrollCue />
     </section>
   )
 }
