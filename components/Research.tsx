@@ -18,13 +18,13 @@ export default function Research() {
 
         <div className="grid md:grid-cols-3 gap-6">
           {pillars.map((p, i) => (
-            <article key={p.k} className="group relative rounded-2xl p-0.5 bg-gradient-to-b from-white/10 to-white/5">
+            <article key={p.k} className="group relative rounded-2xl p-0.5 bg-gradient-to-b from-white/10 to-white/5 will-change-transform">
               {/* spectral border */}
               <div className="absolute -inset-[1px] rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-700" style={{
                 background: 'conic-gradient(from 140deg at 50% 50%, rgba(34,211,238,.25), rgba(168,85,247,.25), rgba(59,130,246,.25), rgba(34,211,238,.25))',
                 filter: 'blur(8px)'
               }} />
-              <div className="relative h-full rounded-2xl bg-gradient-to-b from-black/60 to-black/40 backdrop-blur-xl p-8 overflow-hidden">
+              <div className="relative h-full rounded-2xl bg-gradient-to-b from-black/60 to-black/40 p-8 overflow-hidden">
                 {/* corner glow */}
                 <div className="absolute right-6 -bottom-6 w-32 h-32 rounded-full bg-gradient-to-br from-cyan-400/20 via-white/5 to-fuchsia-400/20 blur-2xl" />
                 <h3 className="relative z-10 text-2xl md:text-3xl font-semibold text-white mb-4 tracking-tight">{p.title}</h3>

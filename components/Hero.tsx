@@ -5,17 +5,29 @@ export default function Hero() {
 
   useEffect(() => {
     const el = wrapRef.current!
+    let mx = 0, my = 0
+    let tx = 0, ty = 0
+    let raf: number | null = null
+
     const onMove = (e: MouseEvent) => {
       const { innerWidth: w, innerHeight: h } = window
-      const rx = ((e.clientY / h) - 0.5) * 8
-      const ry = ((e.clientX / w) - 0.5) * -8
-      el.style.setProperty('--rx', rx.toFixed(2) + 'deg')
-      el.style.setProperty('--ry', ry.toFixed(2) + 'deg')
-      el.style.setProperty('--tx', ((e.clientX / w) - 0.5) * 6 + 'px')
-      el.style.setProperty('--ty', ((e.clientY / h) - 0.5) * 6 + 'px')
+      mx = ((e.clientX / w) - 0.5) * 10
+      my = ((e.clientY / h) - 0.5) * 10
+    }
+    const loop = () => {
+      // ease towards target
+      tx += (mx - tx) * 0.08
+      ty += (my - ty) * 0.08
+      el.style.setProperty('--rx', `${ty.toFixed(2)}deg`)
+      el.style.setProperty('--ry', `${-tx.toFixed(2)}deg`)
+      raf = requestAnimationFrame(loop)
     }
     window.addEventListener('mousemove', onMove)
-    return () => window.removeEventListener('mousemove', onMove)
+    raf = requestAnimationFrame(loop)
+    return () => {
+      window.removeEventListener('mousemove', onMove)
+      if (raf) cancelAnimationFrame(raf)
+    }
   }, [])
 
   return (

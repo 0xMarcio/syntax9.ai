@@ -49,11 +49,11 @@ export default function Projects() {
 
         <div className="grid md:grid-cols-3 gap-6">
           {streams.map((s) => (
-            <article key={s.k} className="group relative rounded-3xl p-0.5 bg-gradient-to-b from-white/10 to-white/5 overflow-hidden">
+            <article key={s.k} className="group relative rounded-3xl p-0.5 bg-gradient-to-b from-white/10 to-white/5 overflow-hidden will-change-transform">
               {/* luminous frame */}
-              <div className={`absolute -inset-[1px] rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-700 bg-gradient-to-r ${s.accent}`} style={{ filter: 'blur(10px)' }} />
+              <div className={`absolute -inset-[1px] rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-700 bg-gradient-to-r ${s.accent}`} style={{ filter: 'blur(6px)' }} />
 
-              <div className="relative rounded-3xl bg-gradient-to-b from-black/60 to-black/40 p-8 min-h-[260px] isolate">
+              <div className="relative rounded-3xl bg-gradient-to-b from-black/60 to-black/40 p-8 min-h-[240px] isolate">
                 <Viz accent={s.accent} />
                 <div className="relative z-10">
                   <h3 className="text-2xl font-semibold text-white tracking-tight">{s.title}</h3>
