@@ -8,21 +8,6 @@
   </head>
   <body>
     <div id="root"></div>
-    <script>
-      (function() {
-        var isLocal = location.hostname === 'localhost' || location.hostname === '127.0.0.1';
-        if (!isLocal && !location.pathname.startsWith('/docs/')) {
-          // On GitHub Pages serving the repo root, redirect to built site in /docs
-          location.replace('/docs/');
-          return;
-        }
-        if (isLocal) {
-          var s = document.createElement('script');
-          s.type = 'module';
-          s.src = '/main.tsx';
-          document.head.appendChild(s);
-        }
-      })();
-    </script>
+    <script type="module" src="/main.tsx"></script>
   </body>
 </html>
