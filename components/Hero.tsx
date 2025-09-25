@@ -66,8 +66,8 @@ export default function Hero() {
 
         <h1 className="mx-auto max-w-6xl text-5xl md:text-7xl lg:text-8xl font-black leading-[0.9] tracking-tight">
           <span className="relative inline-block">
-            <span className="absolute inset-0 bg-gradient-to-r from-cyan-300 via-white to-fuchsia-400 bg-clip-text text-transparent blur-md opacity-70" aria-hidden>Syntaxy9</span>
-            <span className="relative bg-gradient-to-br from-white via-cyan-100 to-white bg-clip-text text-transparent [text-shadow:0_2px_40px_rgba(59,130,246,.25)]">Syntaxy9</span>
+            <span className="absolute inset-0 bg-gradient-to-r from-cyan-300 via-white to-fuchsia-400 bg-clip-text text-transparent blur-md opacity-70" aria-hidden>Syntax9</span>
+            <span className="relative bg-gradient-to-br from-white via-cyan-100 to-white bg-clip-text text-transparent [text-shadow:0_2px_40px_rgba(59,130,246,.25)]">Syntax9</span>
           </span>
         </h1>
 

@@ -4,7 +4,7 @@ export default function Manifesto() {
       <div className="relative max-w-6xl mx-auto px-6">
         <div className="text-center">
           <p className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 backdrop-blur-md text-xs tracking-[0.3em] uppercase text-gray-300">
-            Syntaxy9 • Research
+            Syntax9 • Research
           </p>
 
           <h2 className="mt-6 text-[9vw] md:text-6xl font-black leading-[0.95] tracking-tight">

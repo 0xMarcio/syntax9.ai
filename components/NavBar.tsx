@@ -8,7 +8,7 @@ export default function NavBar() {
               <span className="absolute inset-0 rounded-md bg-gradient-to-br from-cyan-400 to-fuchsia-500 opacity-60 blur-md" />
               <span className="relative h-6 w-6 rounded-md bg-black ring-1 ring-white/20 grid place-items-center text-xs font-bold">S9</span>
             </span>
-            <span className="text-sm tracking-wider text-white/90 group-hover:text-white transition">Syntaxy9</span>
+            <span className="text-sm tracking-wider text-white/90 group-hover:text-white transition">Syntax9</span>
           </a>
           <nav className="hidden md:flex items-center gap-6 text-sm text-white/70">
             <a href="#capabilities" className="hover:text-white transition">Capabilities</a>
@@ -21,4 +21,3 @@ export default function NavBar() {
     </header>
   )
 }
-

@@ -8,7 +8,7 @@ export default function Footer() {
       <div className="relative z-10 max-w-6xl mx-auto px-6 text-center">
         <div className="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-white/5 backdrop-blur-md ring-1 ring-white/10">
           <span className="inline-block w-2 h-2 rounded-full bg-cyan-400 animate-pulse" />
-          <span className="text-xs tracking-[0.25em] text-gray-300 uppercase">Syntaxy9 Research Lab</span>
+          <span className="text-xs tracking-[0.25em] text-gray-300 uppercase">Syntax9 Research Lab</span>
         </div>
 
         <h3 className="mt-6 text-2xl md:text-3xl font-semibold tracking-tight bg-gradient-to-r from-cyan-300 via-white to-fuchsia-300 bg-clip-text text-transparent">
@@ -21,7 +21,7 @@ export default function Footer() {
         </div>
 
         <div className="mt-10 h-px w-full bg-gradient-to-r from-transparent via-white/30 to-transparent" />
-        <p className="mt-6 text-sm text-gray-500">© {new Date().getFullYear()} Syntaxy9 • syntax9.ai</p>
+        <p className="mt-6 text-sm text-gray-500">© {new Date().getFullYear()} Syntax9 • syntax9.ai</p>
       </div>
     </footer>
   )
