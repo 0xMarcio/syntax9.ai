@@ -34,8 +34,8 @@ export default function Hero() {
 
       <div ref={wrapRef} className="relative z-10 text-center px-6 will-change-transform" style={{ transform: 'perspective(1200px) rotateX(var(--rx, 0)) rotateY(var(--ry, 0))' }}>
         <div className="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-white/5 backdrop-blur-md ring-1 ring-white/10 mb-6">
-          <span className="inline-block w-2 h-2 rounded-full bg-emerald-400 animate-pulse shadow-[0_0_20px_2px_rgba(16,185,129,0.6)]" />
-          <span className="text-xs tracking-[0.25em] text-gray-300 uppercase">Now Generating Tomorrow</span>
+          <span className="inline-block w-2 h-2 rounded-full bg-cyan-400 animate-pulse shadow-[0_0_20px_2px_rgba(56,189,248,0.6)]" />
+          <span className="text-xs tracking-[0.25em] text-gray-300 uppercase">Cybersecurity × GenAI Research</span>
         </div>
 
         <h1 className="mx-auto max-w-6xl text-6xl md:text-8xl font-black leading-[0.9] tracking-tight">
@@ -50,23 +50,16 @@ export default function Hero() {
         </h1>
 
         <p className="mt-6 text-lg md:text-2xl text-gray-300/90 max-w-3xl mx-auto">
-          Futuristic intelligence. Sovereign security. Designed with cinematic precision.
+          We explore adversarial ML, autonomous defense, and cryptographic resilience.
         </p>
 
-        <div className="mt-10 flex items-center justify-center gap-4">
+        <div className="mt-10 flex items-center justify-center">
           <a
-            href="#explore"
+            href="#research"
             className="relative rounded-xl px-6 py-3 font-medium text-black bg-white hover:brightness-110 transition shadow-[0_10px_40px_-10px_rgba(255,255,255,0.5)]"
           >
-            Explore
+            Explore Focus Areas
             <span className="absolute inset-0 -z-10 rounded-xl bg-gradient-to-r from-cyan-400 to-fuchsia-500 blur-xl opacity-50" />
-          </a>
-          <a
-            href="#"
-            className="group relative rounded-xl px-6 py-3 font-medium text-white/90 ring-1 ring-white/20 hover:ring-white/40 transition"
-          >
-            Watch Demo
-            <span className="absolute -inset-px -z-10 rounded-xl bg-gradient-to-r from-cyan-400/0 via-white/10 to-fuchsia-400/0 opacity-0 group-hover:opacity-100 blur-lg" />
           </a>
         </div>
       </div>
