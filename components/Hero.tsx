@@ -1,6 +1,5 @@
 import { useEffect, useRef } from 'react'
 import BrandMark from './BrandMark'
-import ScrollCue from './ScrollCue'
 
 export default function Hero() {
   const wrapRef = useRef<HTMLDivElement | null>(null)
@@ -67,7 +66,7 @@ export default function Hero() {
         </div>
       </div>
 
-      <ScrollCue />
+      {/* Scroll cue removed */}
     </section>
   )
 }
