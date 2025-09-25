@@ -18,9 +18,9 @@ export default function VisualShowcase() {
         <div className="relative mt-20 h-64">
           <div className="absolute inset-0 flex items-center justify-center">
             <div className="relative">
-              <div className="w-32 h-32 border-2 border-blue-500 rotate-45 animate-spin opacity-50"></div>
-              <div className="absolute inset-4 w-24 h-24 border-2 border-purple-500 rotate-45 animate-spin opacity-50" style={{ animationDirection: 'reverse', animationDuration: '3s' }}></div>
-              <div className="absolute inset-8 w-16 h-16 border-2 border-blue-400 rotate-45 animate-spin opacity-50" style={{ animationDuration: '2s' }}></div>
+              <div className="w-32 h-32 border-2 border-blue-500 rotate-45 animate-spin opacity-50" style={{ animationDuration: '30s' }}></div>
+              <div className="absolute inset-4 w-24 h-24 border-2 border-purple-500 rotate-45 animate-spin opacity-50" style={{ animationDirection: 'reverse', animationDuration: '25s' }}></div>
+              <div className="absolute inset-8 w-16 h-16 border-2 border-blue-400 rotate-45 animate-spin opacity-50" style={{ animationDuration: '20s' }}></div>
             </div>
           </div>
           
