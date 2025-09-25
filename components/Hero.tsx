@@ -36,7 +36,7 @@ export default function Hero() {
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black/0 select-none">
 
       <div ref={wrapRef} className="relative z-10 text-center px-6 will-change-transform" style={{ transform: 'perspective(1200px) rotateX(var(--rx, 0)) rotateY(var(--ry, 0))' }}>
-        <div className="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-white/5 backdrop-blur-md ring-1 ring-white/10 mb-6">
+        <div className="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-white/5 backdrop-blur-md mb-6">
           <span className="inline-block w-2 h-2 rounded-full bg-cyan-400 animate-pulse shadow-[0_0_20px_2px_rgba(56,189,248,0.6)]" />
           <span className="text-xs tracking-[0.25em] text-gray-300 uppercase">Cybersecurity × GenAI Research</span>
         </div>
@@ -67,12 +67,6 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* accent rings */}
-      <div className="pointer-events-none absolute inset-0 -z-10" aria-hidden>
-        <div className="absolute left-1/2 top-[20%] -translate-x-1/2 w-[60vmin] h-[60vmin] rounded-full border border-white/10" style={{ filter: 'drop-shadow(0 0 40px rgba(59,130,246,0.25))' }} />
-        <div className="absolute left-[20%] top-[35%] w-[30vmin] h-[30vmin] rounded-full border border-white/10" />
-        <div className="absolute right-[18%] top-[28%] w-[22vmin] h-[22vmin] rounded-full border border-white/10" />
-      </div>
       <ScrollCue />
     </section>
   )

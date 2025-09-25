@@ -49,25 +49,22 @@ export default function Projects() {
 
         <div className="grid md:grid-cols-3 gap-6">
           {streams.map((s) => (
-            <article key={s.k} className="group relative rounded-3xl p-0.5 bg-gradient-to-b from-white/10 to-white/5 overflow-hidden will-change-transform">
-              {/* luminous frame */}
-              <div className={`absolute -inset-[1px] rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-700 bg-gradient-to-r ${s.accent}`} style={{ filter: 'blur(6px)' }} />
+            <article key={s.k} className="group relative rounded-3xl overflow-hidden">
+              <div className="absolute inset-0 bg-gradient-to-b from-white/[0.02] to-white/[0.01]" />
+              <div className="absolute -inset-20 opacity-20 blur-2xl" style={{ background: `radial-gradient(60%_60%_at_50%_40%, rgba(255,255,255,.12), transparent)` }} />
 
-              <div className="relative rounded-3xl bg-gradient-to-b from-black/60 to-black/40 p-8 min-h-[240px] isolate">
-                <Viz accent={s.accent} />
-                <div className="relative z-10">
-                  <h3 className="text-2xl font-semibold text-white tracking-tight">{s.title}</h3>
-                  <p className="mt-3 text-gray-300/90 leading-relaxed">{s.blurb}</p>
-                </div>
+              <div className="relative p-8 min-h-[220px]">
+                <h3 className="text-2xl font-semibold tracking-tight bg-gradient-to-r from-white to-white/80 bg-clip-text text-transparent">
+                  {s.title}
+                </h3>
+                <p className="mt-3 text-gray-300/90 leading-relaxed max-w-prose">
+                  {s.blurb}
+                </p>
               </div>
             </article>
           ))}
         </div>
       </div>
-
-      <style dangerouslySetInnerHTML={{ __html: `
-        @keyframes ring { from { transform: rotate(0deg) } to { transform: rotate(360deg) } }
-      ` }} />
     </section>
   )
 }
