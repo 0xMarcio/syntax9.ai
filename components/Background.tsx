@@ -3,7 +3,7 @@ import Aurora from './Aurora'
 
 export default function Background() {
   return (
-    <div className="pointer-events-none fixed inset-0 -z-10">
+    <div className="pointer-events-none fixed inset-0 z-0">
       <Starfield />
       <Aurora />
       {/* global nebula orbs */}
@@ -14,4 +14,3 @@ export default function Background() {
     </div>
   )
 }
-

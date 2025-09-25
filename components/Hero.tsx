@@ -29,8 +29,8 @@ export default function Hero() {
 
         <h1 className="mx-auto max-w-6xl text-6xl md:text-8xl font-black leading-[0.9] tracking-tight">
           <span className="relative inline-block">
-            <span className="absolute inset-0 bg-gradient-to-r from-cyan-400 via-sky-300 to-fuchsia-400 bg-clip-text text-transparent blur-md opacity-60" aria-hidden>SYNTAX9</span>
-            <span className="relative bg-gradient-to-br from-white via-cyan-100 to-white bg-clip-text text-transparent [text-shadow:0_2px_40px_rgba(59,130,246,.25)]">SYNTAX9</span>
+            <span className="absolute inset-0 bg-gradient-to-r from-cyan-400 via-sky-300 to-fuchsia-400 bg-clip-text text-transparent blur-md opacity-60" aria-hidden>Syntaxy9</span>
+            <span className="relative bg-gradient-to-br from-white via-cyan-100 to-white bg-clip-text text-transparent [text-shadow:0_2px_40px_rgba(59,130,246,.25)]">Syntaxy9</span>
             {/* sheen */}
             <span className="pointer-events-none absolute inset-0 [mask-image:linear-gradient(90deg,transparent,black,transparent)]" aria-hidden>
               <span className="absolute inset-y-0 -left-1/3 w-1/3 bg-gradient-to-r from-transparent via-white to-transparent opacity-60 skew-x-12 animate-[sheen_2.8s_ease-in-out_infinite]" />

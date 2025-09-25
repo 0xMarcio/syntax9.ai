@@ -1,19 +1,7 @@
 const pillars = [
-  {
-    k: 'aml',
-    title: 'Adversarial ML',
-    desc: 'Red-teaming LLMs and vision models, robust training, and attack simulations.'
-  },
-  {
-    k: 'autodef',
-    title: 'Autonomous Defense',
-    desc: 'Self-healing, self-reasoning agents that detect and neutralize threats in real time.'
-  },
-  {
-    k: 'crypto',
-    title: 'Post‑Quantum Crypto',
-    desc: 'Next-gen cryptographic primitives for agent toolchains and model supply chains.'
-  }
+  { k: 'aml', title: 'Adversarial ML', desc: 'Robustness, jailbreaks, and evaluation protocols for LLMs and multimodal systems.' },
+  { k: 'autodef', title: 'Autonomous Defense', desc: 'Self-assessing agents with critique/repair loops and verifiable constraints.' },
+  { k: 'crypto', title: 'Post‑Quantum Crypto', desc: 'Trust channels, attestations, and supply‑chain integrity for agent toolchains.' }
 ]
 
 import SectionHeader from './SectionHeader'
