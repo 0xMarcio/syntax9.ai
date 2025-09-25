@@ -14,7 +14,7 @@ Open http://localhost:5173.
 
 ## Build & Preview
 ```bash
-npm run build   # outputs to dist/
+npm run build   # outputs to docs/
 npm run preview # serve built assets locally
 ```
 
@@ -24,7 +24,7 @@ npm run preview # serve built assets locally
 ## Deploy
 - Any static host works (e.g., Vercel, Netlify, GitHub Pages).
   - Build: `npm run build`
-  - Publish the `dist/` directory.
+  - Publish the `docs/` directory (GitHub Pages uses docs/).
 
 ## Troubleshooting
 - Delete `node_modules` and `package-lock.json`, then reinstall: `rm -rf node_modules package-lock.json && npm install`.

@@ -12,7 +12,7 @@
 ## Build, Test, and Development Commands
 - Install deps: `npm install`.
 - Dev server: `npm run dev` (opens at http://localhost:5173).
-- Build: `npm run build` (outputs to `dist/`).
+- Build: `npm run build` (outputs to `docs/`).
 - Preview build: `npm run preview`.
 
 ## Coding Style & Naming Conventions
