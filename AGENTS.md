@@ -1,37 +1,36 @@
 # Repository Guidelines
 
+This is a single‑package React app (Vite + Tailwind v4) served via GitHub Pages. Use this guide to develop, test, and ship changes consistently.
+
 ## Project Structure & Module Organization
-- Single-package app at repo root (no backend).
-- Stack: React + Vite + Tailwind v4.
-  - Entry: `index.html` with `main.tsx` mounting `App.tsx`.
-  - Components in `components/` (e.g., `Hero.tsx`, `Footer.tsx`).
-  - Styles in `index.css` (Tailwind directives + theme tokens).
-  - Config: `vite.config.ts`, `tsconfig.json`.
-  - Env (optional): `.env.development` for Vite vars.
+- Entry flow: `index.html` → `main.tsx` → `App.tsx`.
+- Components in `components/` (PascalCase, one component per file).
+- Styles in `index.css` (Tailwind directives + theme tokens). Public assets in `public/`.
+- Build output is `docs/` (Pages publishes from this folder).
+- Alias `@/` maps to project root. Example: `import '@/components/Hero'`.
 
 ## Build, Test, and Development Commands
-- Install deps: `npm install`.
-- Dev server: `npm run dev` (opens at http://localhost:5173).
-- Build: `npm run build` (outputs to `docs/`).
-- Preview build: `npm run preview`.
+- Install deps: `npm install`
+- Run dev server: `npm run dev` (http://localhost:5173)
+- Build production: `npm run build` → writes to `docs/`
+- Preview built site: `npm run preview` (or `npm start`)
 
 ## Coding Style & Naming Conventions
-- TypeScript + React function components.
-- Indentation: 2 spaces; concise, readable lines.
-- Components: PascalCase filenames (e.g., `VisualShowcase.tsx`).
-- Imports: Alias `@/` maps to project root; `import '@/components/Hero'`.
-- Styling: Tailwind utilities first; inline styles allowed for complex animations.
+- TypeScript + React function components. Indentation: 2 spaces.
+- Components: PascalCase filenames; focused, composable units; colocate small helpers.
+- Styling: Prefer Tailwind utilities; keep classlists readable. Use inline styles only for complex visuals/animation.
+- Imports: Use the `@/` alias for absolute paths.
 
 ## Testing Guidelines
 - Not configured yet. Recommended: Vitest + React Testing Library.
-- Name tests `*.test.tsx` colocated with component (e.g., `components/Hero.test.tsx`).
-- Run (once configured): `npm run test`.
+- Name tests `*.test.tsx` next to the component (e.g., `components/Hero.test.tsx`).
+- Test behavior, not implementation; avoid network calls. Run (once added): `npm run test`.
 
 ## Commit & Pull Request Guidelines
-- Commits: concise, imperative subject (≤72 chars). Example: `Add Hero animation sweep`.
-- Reference issues with `#123` when applicable.
-- PRs: clear description, linked issues, and UI screenshots/GIFs. Confirm `npm run build` passes and `npm run dev` works.
+- Commit messages: imperative, concise subject (≤72 chars). Example: `Add radar grid hero`.
+- Keep diffs focused; include rationale in the body when non‑obvious; reference issues (e.g., `#123`).
+- PRs: description, linked issues, screenshots/GIFs for UI; confirm `npm run dev` and `npm run build` succeed.
 
 ## Security & Configuration Tips
-- Do not commit secrets. Use untracked `.env.local` for overrides.
-- If you ever introduce APIs, document ports and update `VITE_CLIENT_TARGET`.
+- Do not commit secrets. Use untracked `.env.local`; optional `.env.development` for local Vite vars.
+- Pages deploy reads from `docs/`. If you change `outDir`, update `.github/workflows/pages.yml` and keep `public/CNAME` intact.
