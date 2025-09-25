@@ -10,9 +10,5 @@ export default defineConfig({
     },
   },
   plugins: [tailwindcss(), react()],
-  mode: 'development',
-  build: {
-    minify: false,
-  },
+  // Let Vite pick production defaults for build
 })
-
