@@ -127,6 +127,8 @@
 /* MDX Prose refinements */
 [data-kind="mdx-prose"] {
   --tw-prose-body: theme(--color-foreground);
+  font-size: 17px;
+  line-height: var(--leading-relaxed);
 }
 [data-kind="mdx-prose"] pre code { @apply bg-transparent p-0; }
 [data-kind="mdx-prose"] :where(h1,h2,h3)+p { @apply mt-3; }
@@ -136,3 +138,17 @@
 [data-kind="mdx-prose"] ol { list-style-type: decimal; list-style-position: outside; margin-left: 1.25rem; }
 [data-kind="mdx-prose"] ul { list-style-type: disc; list-style-position: outside; margin-left: 1.25rem; }
 [data-kind="mdx-prose"] li { display: list-item; }
+
+/* Explicit heading/paragraph sizes so content never inherits odd sizes */
+[data-kind="mdx-prose"] h1 { font-size: clamp(26px, 2.6vw, 34px); font-weight: 600; letter-spacing: var(--tracking-tight); }
+[data-kind="mdx-prose"] h2 { font-size: clamp(22px, 2.2vw, 28px); font-weight: 600; letter-spacing: var(--tracking-tight); margin-top: 1.25rem; }
+[data-kind="mdx-prose"] h3 { font-size: clamp(19px, 1.9vw, 22px); font-weight: 600; letter-spacing: var(--tracking-tight); margin-top: 1rem; }
+[data-kind="mdx-prose"] p { margin-top: .9rem; color: rgba(255,255,255,.9); }
+[data-kind="mdx-prose"] a { color: oklch(78.9% .154 211.53); text-decoration: none; }
+[data-kind="mdx-prose"] a:hover { color: white; text-decoration: underline; text-underline-offset: 4px; }
+[data-kind="mdx-prose"] blockquote { border-left: 2px solid rgba(255,255,255,.2); padding-left: 1rem; color: rgba(255,255,255,.8); margin-top: 1rem; }
+[data-kind="mdx-prose"] table { width: 100%; border-collapse: collapse; margin-top: 1rem; }
+[data-kind="mdx-prose"] th { text-align: left; border-bottom: 1px solid rgba(255,255,255,.15); padding: .5rem .75rem; }
+[data-kind="mdx-prose"] td { border-bottom: 1px solid rgba(255,255,255,.06); padding: .5rem .75rem; }
+[data-kind="mdx-prose"] pre { background: linear-gradient(to bottom, rgba(255,255,255,.06), rgba(255,255,255,.03)); border: 1px solid rgba(255,255,255,.1); border-radius: .75rem; padding: 1rem; margin-top: 1rem; }
+[data-kind="mdx-prose"] code:not(pre code) { background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.12); border-radius: .375rem; padding: 0 .25rem; }
