@@ -132,3 +132,7 @@
 [data-kind="mdx-prose"] :where(h1,h2,h3)+p { @apply mt-3; }
 [data-kind="mdx-prose"] ul ul, [data-kind="mdx-prose"] ol ol { @apply mt-2 ml-6; }
 [data-kind="mdx-prose"] code:not(pre code) { @apply align-baseline; }
+/* Ensure list markers always render (work around any resets) */
+[data-kind="mdx-prose"] ol { list-style-type: decimal; list-style-position: outside; margin-left: 1.25rem; }
+[data-kind="mdx-prose"] ul { list-style-type: disc; list-style-position: outside; margin-left: 1.25rem; }
+[data-kind="mdx-prose"] li { display: list-item; }
