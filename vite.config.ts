@@ -7,6 +7,8 @@ import mdx from '@mdx-js/rollup'
 import remarkFrontmatter from 'remark-frontmatter'
 // @ts-ignore
 import remarkMdxFrontmatter from 'remark-mdx-frontmatter'
+// @ts-ignore
+import remarkGfm from 'remark-gfm'
 // rehype plugins for better MDX rendering
 // @ts-ignore
 import rehypeSlug from 'rehype-slug'
@@ -26,10 +28,7 @@ export default defineConfig({
   plugins: [
     // MDX before React so .mdx compiles to JSX first
     mdx({
-      remarkPlugins: [
-        remarkFrontmatter,
-        [remarkMdxFrontmatter, { name: 'meta' }],
-      ],
+      remarkPlugins: [remarkFrontmatter, [remarkMdxFrontmatter, { name: 'meta' }], remarkGfm],
       rehypePlugins: [
         rehypeSlug,
         [rehypeAutolinkHeadings, { behavior: 'wrap', properties: { className: 'no-underline' } }],

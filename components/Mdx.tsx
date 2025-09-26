@@ -9,9 +9,9 @@ const components: Components = {
   h2: (p) => <h2 {...p} className={cls('mt-8 text-2xl md:text-3xl font-semibold tracking-tight text-white', p.className)} />,
   h3: (p) => <h3 {...p} className={cls('mt-6 text-xl md:text-2xl font-semibold tracking-tight text-white', p.className)} />,
   p: (p) => <p {...p} className={cls('mt-4 leading-relaxed text-white/90', p.className)} />,
-  ul: (p) => <ul {...p} className={cls('mt-4 list-disc pl-6 space-y-2 text-white/90', p.className)} />,
-  ol: (p) => <ol {...p} className={cls('mt-4 list-decimal pl-6 space-y-2 text-white/90', p.className)} />,
-  li: (p) => <li {...p} className={cls('marker:text-white/60', p.className)} />,
+  ul: (p) => <ul {...p} className={cls('mt-4 ml-6 list-disc list-outside space-y-2 text-white/90', p.className)} />,
+  ol: (p) => <ol {...p} className={cls('mt-4 ml-6 list-decimal list-outside space-y-2 text-white/90', p.className)} />,
+  li: (p) => <li {...p} className={cls('pl-1 marker:text-white/60', p.className)} />,
   a: (p) => <a {...p} className={cls('text-cyan-300 hover:text-white underline-offset-4 hover:underline', p.className)} />,
   blockquote: (p) => (
     <blockquote {...p} className={cls('mt-6 border-l-2 border-white/20 pl-4 text-white/80 italic', p.className)} />

@@ -123,3 +123,12 @@
 @layer base {
   body { @apply bg-background text-foreground; }
 }
+
+/* MDX Prose refinements */
+[data-kind="mdx-prose"] {
+  --tw-prose-body: theme(--color-foreground);
+}
+[data-kind="mdx-prose"] pre code { @apply bg-transparent p-0; }
+[data-kind="mdx-prose"] :where(h1,h2,h3)+p { @apply mt-3; }
+[data-kind="mdx-prose"] ul ul, [data-kind="mdx-prose"] ol ol { @apply mt-2 ml-6; }
+[data-kind="mdx-prose"] code:not(pre code) { @apply align-baseline; }
