@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
+import { Prose } from '@/components/Mdx'
 
 type Mod = { meta?: { title: string; date: string }; default: React.ComponentType }
 const modules = import.meta.glob('@/content/blog/*.mdx') as Record<string, () => Promise<Mod>>
@@ -29,9 +30,7 @@ export default function BlogPost() {
       <div className="max-w-3xl mx-auto px-6">
         <div className="text-sm text-white/60 tabular-nums">{mod.meta?.date}</div>
         <h1 className="mt-2 text-3xl md:text-4xl font-semibold tracking-tight">{mod.meta?.title}</h1>
-        <div className="mt-6 leading-relaxed text-white/90">
-          {mod.default ? <mod.default /> : null}
-        </div>
+        <Prose>{mod.default ? <mod.default /> : null}</Prose>
         <div className="mt-10 text-sm">
           <a href="#/blog" className="text-cyan-300 hover:text-white">← Back to blog</a>
         </div>
