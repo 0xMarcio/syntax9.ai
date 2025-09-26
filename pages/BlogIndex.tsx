@@ -1,17 +1,11 @@
+import SectionHeader from '@/components/SectionHeader'
 import { blogPosts } from '@/content/blog'
 
-export default function Blog() {
+export default function BlogIndex() {
   return (
-    <section id="blog" className="relative py-28 overflow-hidden">
+    <main className="relative pt-28 pb-20">
       <div className="relative max-w-6xl mx-auto px-6">
-        <div className="text-center mb-14">
-          <h2 className="text-4xl md:text-6xl font-light tracking-wide">
-            <span className="bg-gradient-to-r from-white via-cyan-200 to-white bg-clip-text text-transparent">Latest Writing</span>
-          </h2>
-          <p className="mt-4 text-gray-400 text-lg md:text-xl max-w-3xl mx-auto">Field notes, experiments, and hard‑earned fixes.</p>
-          <div className="mx-auto mt-6 h-px w-48 bg-gradient-to-r from-transparent via-white/40 to-transparent" />
-        </div>
-
+        <SectionHeader title="Blog" subtitle="Field notes, fixes, and experiments." />
         <div className="divide-y divide-white/10 rounded-3xl border border-white/10 bg-black/40 backdrop-blur-md">
           {blogPosts.map((p) => (
             <a key={p.slug} href={`#/blog/${p.slug}`} className="block px-6 py-6 hover:bg-white/[0.03] transition">
@@ -26,6 +20,7 @@ export default function Blog() {
           ))}
         </div>
       </div>
-    </section>
+    </main>
   )
 }
+

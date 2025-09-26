@@ -1,5 +1,4 @@
-import Background from './components/Background'
-import NavBar from './components/NavBar'
+import Layout from './components/Layout'
 import Hero from './components/Hero'
 import Ticker from './components/Ticker'
 import Projects from './components/Projects'
@@ -9,15 +8,13 @@ import Footer from './components/Footer'
 
 export default function App() {
   return (
-    <div className="dark min-h-screen bg-black text-white overflow-x-hidden relative">
-      <Background />
-      <NavBar />
+    <Layout>
       <Hero />
       <Ticker />
       <Projects />
       <Research />
       <Blog />
       <Footer />
-    </div>
+    </Layout>
   )
 }

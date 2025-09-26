@@ -76,11 +76,11 @@ export default function Hero() {
         </p>
 
         <div className="mt-8 flex items-center justify-center gap-3">
-          <a href="#research" className="relative rounded-xl px-6 py-3 font-medium text-black bg-white hover:brightness-110 transition">
+          <a href="#/research" className="relative rounded-xl px-6 py-3 font-medium text-black bg-white hover:brightness-110 transition">
             Read the research
             <span className="absolute inset-0 -z-10 rounded-xl bg-gradient-to-r from-cyan-400 to-fuchsia-500 blur-xl opacity-50" />
           </a>
-          <a href="#capabilities" className="rounded-xl px-6 py-3 font-medium text-white/90 ring-1 ring-white/20 hover:bg-white/10 transition">
+          <a href="#/" className="rounded-xl px-6 py-3 font-medium text-white/90 ring-1 ring-white/20 hover:bg-white/10 transition">
             Explore capabilities
           </a>
         </div>

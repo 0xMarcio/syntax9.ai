@@ -11,10 +11,10 @@ export default function NavBar() {
             <span className="text-sm tracking-wider text-white/90 group-hover:text-white transition">Syntax9</span>
           </a>
           <nav className="hidden md:flex items-center gap-6 text-sm text-white/70">
-            <a href="#capabilities" className="hover:text-white transition">Capabilities</a>
-            <a href="#research" className="hover:text-white transition">Research</a>
-            <a href="#blog" className="hover:text-white transition">Blog</a>
-            <a href="#contact" className="rounded-md bg-white/90 text-black px-3 py-1.5 font-medium hover:brightness-105 transition">Get in touch</a>
+            <a href="#/" className="hover:text-white transition">Home</a>
+            <a href="#/research" className="hover:text-white transition">Research</a>
+            <a href="#/blog" className="hover:text-white transition">Blog</a>
+            <a href="mailto:hello@syntax9.ai" className="rounded-md bg-white/90 text-black px-3 py-1.5 font-medium hover:brightness-105 transition">Get in touch</a>
           </nav>
         </div>
       </div>
