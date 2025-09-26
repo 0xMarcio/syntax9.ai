@@ -11,9 +11,9 @@ or unapproved invocations.
 
 ### Pattern
 
-```
-signature = sign(tool_id || args || nonce, key)
-assert verify(signature)
+```javascript
+const signature = sign(tool_id + args + nonce, key)
+if (!verify(signature)) throw new Error('invalid signature')
 execute(tool_id, allowlist(args))
 ```
 

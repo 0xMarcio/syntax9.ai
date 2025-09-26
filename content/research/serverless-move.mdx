@@ -13,9 +13,10 @@ summary: "Signal fusion across IAM, runtime, and network to catch stealthy pivot
 
 ### Detection sketch
 
-```
+```python
 score = w1*rare(iam.actions) + w2*net.new_asn + w3*dns.entropy
-if score > T: raise('suspected lateral move')
+if score > T:
+    raise('suspected lateral move')
 ```
 
 We validated on replayed incidents; precision improved after whitelisting CI/CD identities.
