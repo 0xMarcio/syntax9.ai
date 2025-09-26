@@ -7,6 +7,12 @@ import mdx from '@mdx-js/rollup'
 import remarkFrontmatter from 'remark-frontmatter'
 // @ts-ignore
 import remarkMdxFrontmatter from 'remark-mdx-frontmatter'
+// rehype plugins for better MDX rendering
+// @ts-ignore
+import rehypeSlug from 'rehype-slug'
+// @ts-ignore
+import rehypeAutolinkHeadings from 'rehype-autolink-headings'
+import rehypeShiki from '@shikijs/rehype'
 
 export default defineConfig({
   // GitHub Pages: output built site into `docs/`
@@ -22,7 +28,12 @@ export default defineConfig({
     mdx({
       remarkPlugins: [
         remarkFrontmatter,
-        [remarkMdxFrontmatter, { name: 'meta' }], // exposes `export const meta = { ... }`
+        [remarkMdxFrontmatter, { name: 'meta' }],
+      ],
+      rehypePlugins: [
+        rehypeSlug,
+        [rehypeAutolinkHeadings, { behavior: 'wrap', properties: { className: 'no-underline' } }],
+        [rehypeShiki, { theme: 'github-dark' }],
       ],
     }),
     tailwindcss(),

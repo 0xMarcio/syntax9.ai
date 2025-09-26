@@ -21,11 +21,13 @@ const components: Components = {
   pre: (p) => (
     <pre
       {...p}
-      className={cls(
-        'mt-5 overflow-x-auto rounded-xl border border-white/10 bg-gradient-to-b from-white/[0.06] to-white/[0.03] p-4 text-[0.95em] text-white/90',
-        p.className,
-      )}
+      className={cls('mt-5 overflow-x-auto rounded-xl border border-white/10 p-4 text-[0.95em] text-white/90', p.className)}
     />
+  ),
+  strong: (p) => <strong {...p} className={cls('font-semibold text-white', p.className)} />,
+  em: (p) => <em {...p} className={cls('italic text-white/90', p.className)} />,
+  kbd: (p) => (
+    <kbd {...p} className={cls('rounded border border-white/20 bg-white/5 px-1.5 py-0.5 text-[0.85em] text-white/90', p.className)} />
   ),
   table: (p) => (
     <div className="mt-6 overflow-x-auto">
@@ -46,4 +48,3 @@ export function Prose({ children }: { children: React.ReactNode }) {
     </MDXProvider>
   )
 }
-
