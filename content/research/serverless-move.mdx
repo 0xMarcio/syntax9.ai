@@ -1,0 +1,21 @@
+---
+title: Detecting lateral movement in serverless estates
+tag: Detection
+date: 2025-06-12
+summary: "Signal fusion across IAM, runtime, and network to catch stealthy pivots without agents."
+---
+
+## Signals
+
+- IAM: unusual role assumption chain depth and rare action combos.
+- Runtime: cold‑start anomalies + extended network egress to new ASNs.
+- Network: DNS entropy spikes tied to short TTLs.
+
+### Detection sketch
+
+```
+score = w1*rare(iam.actions) + w2*net.new_asn + w3*dns.entropy
+if score > T: raise('suspected lateral move')
+```
+
+We validated on replayed incidents; precision improved after whitelisting CI/CD identities.

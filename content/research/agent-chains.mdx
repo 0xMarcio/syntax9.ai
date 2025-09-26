@@ -1,0 +1,22 @@
+---
+title: Adaptive red teaming for agentic systems
+tag: Adversarial
+date: 2025-07-03
+summary: "From single prompts to evolving chains: pressure‑testing agent loops and tool use."
+---
+
+## Approach
+
+We move beyond one‑shot jailbreaks to chain‑level attacks: perturb memory, tool arguments, and intermediate state. A
+driver generates counterfactual steps, while a critic labels success.
+
+### Scenario set
+
+- Spec‑confusion on tool schema → silent parameter injection.
+- Memory splice → instruction smuggling after “safe” steps.
+- Guardrail drift → refusal‑bypass after reflective edits.
+
+### Outcome
+
+Chain coverage increased 3×, finding issues that single‑turn eval missed. Best defense was signed tool use + argument
+schemas with strict validation.

@@ -1,0 +1,27 @@
+---
+title: Mapping shadow assets with model‑aided discovery
+tag: Surface
+date: 2025-08-02
+summary: "Combining passive DNS, CT logs, and LLM heuristics to surface unknown internet exposure."
+---
+
+## Overview
+
+Shadow assets drive incidents: forgotten subdomains, orphaned buckets, and debug endpoints. We fuse passive DNS,
+certificate transparency, WHOIS, and vendor APIs, then enlist a small LLM to group and rank candidates by ownership
+likelihood.
+
+### Method
+
+- Seed from apex + historical CN/SANs, expand via passive DNS and NS glue.
+- Normalize by registrant, ASN, and banner signatures; dedupe by Jaccard on token sets.
+- LLM scoring on short metadata tuples (no secrets) to prioritize probable matches.
+
+### Findings
+
+Across three orgs, mean unknowns dropped by 41% with two hours of analyst time. False positives were dominated by
+vendor shared infra—mitigated by a simple ASN denylist and PTR heuristics.
+
+### Mitigations
+
+Automate rechecks weekly; alert on ownership drift (WHOIS/CT deltas) and sudden banner change.

@@ -1,10 +1,20 @@
+import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
-import { getBlog } from '@/content/blog'
+
+type Mod = { meta?: { title: string; date: string }; default: React.ComponentType }
+const modules = import.meta.glob('@/content/blog/*.mdx') as Record<string, () => Promise<Mod>>
 
 export default function BlogPost() {
   const { slug } = useParams()
-  const post = slug ? getBlog(slug) : undefined
-  if (!post) {
+  const [mod, setMod] = useState<Mod | null>(null)
+  useEffect(() => {
+    if (!slug) return
+    const key = Object.keys(modules).find((p) => p.endsWith(`${slug}.mdx`))
+    if (!key) { setMod(null); return }
+    modules[key]().then(setMod)
+  }, [slug])
+
+  if (!mod) {
     return (
       <main className="relative pt-32 pb-24">
         <div className="max-w-3xl mx-auto px-6 text-center">
@@ -17,10 +27,10 @@ export default function BlogPost() {
   return (
     <main className="relative pt-32 pb-24">
       <div className="max-w-3xl mx-auto px-6">
-        <div className="text-sm text-white/60 tabular-nums">{post.date}</div>
-        <h1 className="mt-2 text-3xl md:text-4xl font-semibold tracking-tight">{post.title}</h1>
+        <div className="text-sm text-white/60 tabular-nums">{mod.meta?.date}</div>
+        <h1 className="mt-2 text-3xl md:text-4xl font-semibold tracking-tight">{mod.meta?.title}</h1>
         <div className="mt-6 leading-relaxed text-white/90">
-          {post.body}
+          {mod.default ? <mod.default /> : null}
         </div>
         <div className="mt-10 text-sm">
           <a href="#/blog" className="text-cyan-300 hover:text-white">← Back to blog</a>
@@ -29,4 +39,3 @@ export default function BlogPost() {
     </main>
   )
 }
-

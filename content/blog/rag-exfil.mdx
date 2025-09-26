@@ -1,0 +1,16 @@
+---
+title: Abusing retrieval pipelines to exfiltrate secrets
+date: 2025-07-14
+summary: "Attack paths from prompt space to data space — and how to close them without killing recall."
+---
+
+## The problem
+
+RAG systems often trust retrieved chunks implicitly. Attackers coerce retrieval with crafted queries then steer
+summarization to leak sensitive spans.
+
+### Hardening steps
+
+1. Classification gate on query intent and chunk sensitivity (cheap model).
+2. Redact at chunk load with deterministic policies (regex + DLP), not at response time.
+3. Signed tool calls; trace verdicts alongside answers for audit.

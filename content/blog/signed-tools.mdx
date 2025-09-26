@@ -1,0 +1,20 @@
+---
+title: Signed tool use for safer agents
+date: 2025-06-03
+summary: "Binding intent to execution with verifiable actions and minimal developer friction."
+---
+
+## Why sign?
+
+Tool calls are the blast radius. We sign the schema + arguments and verify at the runtime boundary, rejecting drifted
+or unapproved invocations.
+
+### Pattern
+
+```
+signature = sign(tool_id || args || nonce, key)
+assert verify(signature)
+execute(tool_id, allowlist(args))
+```
+
+Pairs well with strict JSON schemas and minimal capability tokens.
